@@ -1,10 +1,10 @@
-import views from '../views/home.html';
+import view from '../views/home.html';
 
 export default () => {
 	// const views = ``;
 
 	const divElement = document.createElement('div');
-	divElement.innerHTML = views;
+	divElement.innerHTML = view;
 
 	const btnClick = divElement.querySelector('#btnClick');
 	btnClick.addEventListener('click', () => {

@@ -1,24 +1,24 @@
-import Home from '../controllers/index.controller';
+import {pages} from '../controllers/index';
 
 let content = document.getElementById('root');
 
-const router = (route) => {
+const router = async (route) => {
 	content.innerHTML = '';
 	switch (route) {
 		case '#/':
-			content.appendChild(Home());
+			content.appendChild(pages.home());
 			break;
 		case '#/home':
-			content.appendChild(Home());
+			content.appendChild(pages.home());
 			break;
 		case '#/products':
-			console.log('Productos');
+			content.appendChild(pages.products());
 			break;
 		case '#/posts':
-			console.log('Publicaciones');
+			content.appendChild(await pages.posts());
 			break;
 		default:
-			console.log('Error 404');
+			content.appendChild(pages.notFund());
 			break;
 	}
 }
