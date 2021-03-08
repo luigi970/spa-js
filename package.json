@@ -1,5 +1,6 @@
 {
   "name": "js-spa",
+  "homepage": "https://github.com/luigi970/spa-js",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -10,6 +11,7 @@
   "devDependencies": {
     "bootstrap": "^4.6.0",
     "css-loader": "^5.1.1",
+    "gh-pages": "^3.1.0",
     "html-loader": "^2.1.1",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
@@ -19,7 +21,9 @@
   },
   "scripts": {
     "start:dev": "webpack serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "gh-pages": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
